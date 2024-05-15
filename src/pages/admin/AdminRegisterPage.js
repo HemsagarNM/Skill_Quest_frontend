@@ -54,6 +54,7 @@ const AdminRegisterPage = () => {
             })
         
             console.log('Signup successful:', response);
+            navigate('/');
             // Optionally handle success response
         } catch (error) {
             console.error('Signup failed:', error);

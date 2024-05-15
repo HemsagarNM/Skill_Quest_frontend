@@ -88,7 +88,7 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledText = styled.p`
-  /* color: #550080; */
+  color: #252525; 
   margin-top: 30px;
   margin-bottom: 30px; 
   letter-spacing: normal;

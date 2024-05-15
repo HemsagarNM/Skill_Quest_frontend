@@ -54,6 +54,7 @@ const LoginPage = ({ role }) => {
             localStorage.setItem('accessToken', accessToken);
           })
       // Handle successful login, e.g., store the access token in local storage
+      navigate('/home')
     }
     catch (error) {
         setPasswordError(error.response.data.message || 'An error occurred');
