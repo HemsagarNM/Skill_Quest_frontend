@@ -93,3 +93,28 @@ a {
     border-radius: 12px;
   }
 }
+
+.App {
+     text-align: center;
+       padding: 20px;
+}
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.resume-item div {
+  margin: 5px 0;
+}

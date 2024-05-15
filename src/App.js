@@ -11,6 +11,9 @@ import ChooseUser from './pages/ChooseUser';
 import Menu from './HomeMenu';
 import Upload from './Upload';
 import Home from './Home';
+import Result from './pages/ResultPage';
+
+
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
@@ -31,6 +34,7 @@ const App = () => {
           <Route path="/home" element={<Menu tag = {<Home />} />} />
           <Route path='/Upload' element={<Menu  />} />
           <Route path='*' element={<Navigate to="/" />} />
+          <Route path='/Results' element={<Result/>}/>
         </Routes>}
 
       {currentRole === "Admin" &&
