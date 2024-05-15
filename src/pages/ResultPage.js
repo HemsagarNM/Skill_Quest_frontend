@@ -1,30 +1,49 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import ResumeList from './ResumeList';
 import '../index.css';
+import axios from 'axios';
+import { Navigate } from 'react-router-dom';
+import { Button } from '@mui/material';
+
 
 const Result = () => {
+  const navigate= useNavigate();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const BEARER_TOKEN = localStorage.getItem('accessToken')
 
   useEffect(() => {
-    fetch('http://localhost:8000/list/list_name/results')
-      .then(response => response.json())
+     axios.get('http://127.0.0.1:8000/list/Pranith/rankresumes',{
+      headers: {
+            'Authorization': `Bearer ${BEARER_TOKEN}`
+          }
+     })
+    
+    // fetch('http://127.0.0.1:8000/list/Pranith/rankresumes', {
+    //   method: 'GET',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Authorization': `Bearer ${BEARER_TOKEN}⁠`
+    //   }
+    // })
+      .then(response => response.data)
       .then(data => {
         setData(data);
         setLoading(false);
       })
       .catch(error => {
-        setError(error);
         setLoading(false);
       });
-  }, []);
+  },[]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-
+  if(!localStorage.getItem('accessToken')) 
+   navigate('/login')
   return (
-    <div className="App">
+    <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
       <h1>Resume List</h1>
       <ResumeList data={data} />
     </div>

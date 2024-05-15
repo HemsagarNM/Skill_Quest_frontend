@@ -12,7 +12,7 @@ import Menu from './HomeMenu';
 import Upload from './Upload';
 import Home from './Home';
 import Result from './pages/ResultPage';
-
+import Logout from './Logout';
 
 
 const App = () => {
@@ -33,8 +33,9 @@ const App = () => {
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
           <Route path="/home" element={<Menu tag = {<Home />} />} />
           <Route path='/Upload' element={<Menu  />} />
-          <Route path='*' element={<Navigate to="/" />} />
           <Route path='/Results' element={<Result/>}/>
+          <Route path='/logout' element={<Logout />}/>
+          <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
 
       {currentRole === "Admin" &&

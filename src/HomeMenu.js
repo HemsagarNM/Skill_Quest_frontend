@@ -24,12 +24,12 @@ class MenuLinks extends React.Component {
           icon: 'fa-github'
         }, {
           text: 'Rank Resumes',
-          link: '',
+          link: '/Results',
           icon: 'fa-twitter'
         },
         {
             text: 'LogOut',
-            link: '',
+            link: '/logout',
             icon: 'fa-twitter'
           }]
       }
