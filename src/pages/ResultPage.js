@@ -38,7 +38,11 @@ const Result = () => {
       });
   },[]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return (
+  <span>
+  <div style={{color: "#252525"}}>Loading...</div>
+  </span>
+);
   if (error) return <div>Error: {error.message}</div>;
   if(!localStorage.getItem('accessToken')) 
    navigate('/login')
