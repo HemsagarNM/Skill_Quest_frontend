@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 import Students from "./assets/students.svg";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate=useNavigate();
+  if(!localStorage.getItem('accessToken')) navigate('/login');
     return (
         <StyledContainer>
             <Grid container spacing={0}>

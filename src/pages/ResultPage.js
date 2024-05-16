@@ -5,6 +5,7 @@ import '../index.css';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import { Button } from '@mui/material';
+import Menu from '../HomeMenu';
 
 
 const Result = () => {
@@ -39,18 +40,18 @@ const Result = () => {
   },[]);
 
   if (loading) return (
-  <span>
-  <div style={{color: "#252525"}}>Loading...</div>
-  </span>
+  <div style={{color: "#252525", textAlign: 'center'}}>Loading...</div>
 );
   if (error) return <div>Error: {error.message}</div>;
   if(!localStorage.getItem('accessToken')) 
    navigate('/login')
   return (
     <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
+      <br /><br />
       <h1>Resume List</h1>
       <ResumeList data={data} />
     </div>
+    
   );
 };
 

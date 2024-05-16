@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
           <Route path="/home" element={<Menu tag = {<Home />} />} />
           <Route path='/Upload' element={<Menu  />} />
-          <Route path='/Results' element={<Result/>}/>
+          <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
