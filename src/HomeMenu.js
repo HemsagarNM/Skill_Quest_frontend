@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import { Link } from "react-router-dom";
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
+import Lists from "./pages/ListPage";
 
 class MenuLinks extends React.Component {
     constructor(props) {
@@ -16,14 +17,14 @@ class MenuLinks extends React.Component {
             icon: 'fa-pencil-square-o'
         },{
           text: 'GET List',
-          link: 'http://127.0.0.1:8000/docs#/Recruiter/get_list_list_get',
+          link: '/list',
           icon: 'fa-pencil-square-o'
         }, {
           text: 'Upload',
           link: '/Upload',
           icon: 'fa-github'
         }, {
-          text: 'Rank Resumes',
+          text: 'About',
           link: '/Results',
           icon: 'fa-twitter'
         },

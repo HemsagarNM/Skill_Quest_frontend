@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate=useNavigate();
-  if(!localStorage.getItem('accessToken')) navigate('/login');
+  if(!localStorage.getItem('accessToken') || localStorage.getItem('accessToken')== undefined) navigate('/login');
     return (
         <StyledContainer>
             <Grid container spacing={0}>

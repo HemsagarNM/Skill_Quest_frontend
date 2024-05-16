@@ -36,7 +36,9 @@ const App = () => {
           <Route path='/Upload' element={<Menu  />} />
           <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>
-          <Route path='/list' element={<Lists/>}/>
+          <Route path='/list' element={<Menu title ='JOBS' tag={<Lists/>}/>}/>
+          <Route path='/Results/:list_name' element={<Menu title ='Result' tag={<Result /> }/>}  />
+          {/* Component={Result} */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
 

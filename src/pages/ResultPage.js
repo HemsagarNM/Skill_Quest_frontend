@@ -6,9 +6,11 @@ import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import Menu from '../HomeMenu';
+import { useParams } from 'react-router-dom';
 
 
 const Result = () => {
+  const { list_name } = useParams();
   const navigate= useNavigate();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +18,7 @@ const Result = () => {
   const BEARER_TOKEN = localStorage.getItem('accessToken')
 
   useEffect(() => {
-     axios.get('http://127.0.0.1:8000/list/Pranith/rankresumes',{
+     axios.get(`http://127.0.0.1:8000/list/${list_name}/rankresumes`,{
       headers: {
             'Authorization': `Bearer ${BEARER_TOKEN}`
           }

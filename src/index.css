@@ -105,24 +105,6 @@ a {
   align-items: center;
 }
 
-.list{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 10px;
-  width: 300px;
-  text-align: left;
-
-}
-
-.list div{
-  margin: 5px 0;
-}
-
 .resume-item {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -135,4 +117,42 @@ a {
 
 .resume-item div {
   margin: 5px 0;
+}
+
+.list{
+  text-align: center;
+  padding: 100px;
+}
+
+.list div{
+  margin: 5px 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
 }
