@@ -13,6 +13,7 @@ import Upload from './Upload';
 import Home from './Home';
 import Result from './pages/ResultPage';
 import Logout from './Logout';
+import Lists from './pages/ListPage';
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path='/Upload' element={<Menu  />} />
           <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>
+          <Route path='/list' element={<Lists/>}/>
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
 
