@@ -9,12 +9,12 @@ import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
 import Menu from './HomeMenu';
-import FileUpload from './Upload';
+import Upload from './Upload';
 import Home from './Home';
 import Result from './pages/ResultPage';
 import Logout from './Logout';
 import Lists from './pages/ListPage';
-
+import FileUpload from './Upload';
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
@@ -32,6 +32,8 @@ const App = () => {
           <Route path="/Teacherlogin" element={<LoginPage role="Recruiter" />} />
 
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
+          <Route path="/home" element={<Menu title= 'A Streamline Recruitment using Pre-Trained Transformers' tag = {<Home />} />} />
+          <Route path='/Upload' element={<Menu title='Upload' tag={ <FileUpload /> } />} />
           <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>
           <Route path='/list' element={<Menu title ='JOBS' tag={<Lists/>}/>}/>
