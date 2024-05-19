@@ -1,36 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
-import Students from "./assets/students.svg";
+import New from "./assets/New.gif";
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate=useNavigate();
+  useEffect(()=>{
+    if(!localStorage.getItem('accessToken')) 
+        navigate('/');
+  });
   if(!localStorage.getItem('accessToken') || localStorage.getItem('accessToken')== undefined) navigate('/login');
     return (
         <StyledContainer>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6}>
-                <br />
-                <br />
-                <br />
-                    <img src={Students} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center'}} />
+                <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
+                    <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                {/* <Grid item xs={12} md={6}>
                     <StyledPaper elevation={4}>
                         <StyledTitle>
-                            <br />
-                            Welcome to 
-                            <br />
-                            Skill Quest
-                            <br />
                         </StyledTitle>
                         <StyledText>
-                            Streamline Recruitment using Pre-Trained Transformers.
+                            
                         </StyledText>
                     </StyledPaper>
-                </Grid>
+                </Grid> */}
             </Grid>
         </StyledContainer>
     );

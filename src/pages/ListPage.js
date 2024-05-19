@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import Result from './ResultPage';
+import { alignProperty } from '@mui/material/styles/cssUtils';
+import { AlignHorizontalCenter } from '@mui/icons-material';
 
 
 
@@ -51,14 +53,14 @@ const Lists = () => {
   return (
     <div className='list' style={{color: "#252525" ,  letterSpacing: 'normal'}}>
       <h1></h1><br/>
-      <ListContainer lists={lists} />
+      <ListContainer lists={lists} style={{AlignHorizontalCenter:'center'}}/>
     </div>
   );
 };
 
 const ListContainer = ({ lists }) => {
   return (
-    <div>
+    <div className='list-Container'>
       {lists.map((list, index) => (
         <List key={index} name={list} />
       ))}
@@ -68,7 +70,7 @@ const ListContainer = ({ lists }) => {
 
 const List = ({ name }) => {
   return (
-    <div>
+    <div className="list-item">
       <Link to={`/Results/${name}`}>
       <h2>{name}</h2>
     </Link>

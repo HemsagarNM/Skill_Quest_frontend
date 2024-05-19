@@ -7,8 +7,10 @@ const ResumeList = ({ data }) => {
     <div className="resume-list">
       {data.map((item, index) => (
         <div key={index} className="resume-item">
-          <div><strong>Institution:</strong> {item.education.institution}</div>
+          <div><strong>Rank: </strong> {index+1}</div>
           <div><strong>Score:</strong> {item.score}</div>
+          <div><strong>Institution:</strong> {item.education.institution}</div>
+          
           {item.CP.leetCode && (
             <div><strong>LeetCode Score:</strong> {item.CP.leetCode}</div>
           )}

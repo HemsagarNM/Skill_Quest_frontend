@@ -32,8 +32,8 @@ const App = () => {
           <Route path="/Teacherlogin" element={<LoginPage role="Recruiter" />} />
 
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
-          <Route path="/home" element={<Menu tag = {<Home />} />} />
-          <Route path='/Upload' element={<Menu  />} />
+          <Route path="/home" element={<Menu title= 'A Streamline Recruitment using Pre-Trained Transformers' tag = {<Home />} />} />
+          <Route path='/Upload' element={<Menu title='Upload' tag={ <Upload /> } />} />
           <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>
           <Route path='/list' element={<Menu title ='JOBS' tag={<Lists/>}/>}/>

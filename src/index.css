@@ -97,23 +97,34 @@ a {
 .App {
      text-align: center;
        padding: 20px;
+
 }
 
 .resume-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .resume-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: rgb(235, 247, 249);
+  border: 1px solid #0c0b0b;
+  border-radius: 25px;
   padding: 15px;
   margin: 10px;
   width: 300px;
   text-align: left;
+  justify-content: space-evenly;
+  width: 100%;
 }
+
+.resume-item:hover{
+  color: #f9f9f9;
+  background-color: #7f56da ;
+}
+
 
 .resume-item div {
   margin: 5px 0;
@@ -121,11 +132,38 @@ a {
 
 .list{
   text-align: center;
-  padding: 100px;
+  margin: 10px auto;
 }
 
 .list div{
   margin: 5px 0;
+  text-align: center;
+  
+}
+
+.list-Container{
+  text-align: center;
+  border-bottom: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item {
+  background-color: rgb(235, 247, 249);
+  border: 1px solid #0c0b0b;
+  border-radius: 25px;
+  padding: 15px;
+  margin:  auto;
+  width: 300px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.list-item:hover{
+  background-color: #7f56da;
+  color: #f9f9f9;
 }
 
 html {
@@ -155,4 +193,27 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
+}
+
+.UploadStyle {
+  padding-top: 10%;
+  color: #000;
+  background-color: rgb(235, 247, 249);
+  border: 1px solid #0c0b0b;
+  border-radius: 25px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  justify-content: space-evenly;
+  border-bottom: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px auto;
+}
+
+.UploadButton:hover{
+  background-color: #7f56da;
+  color: #f9f9f9;
+
 }

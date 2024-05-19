@@ -33,7 +33,8 @@ const Result = () => {
     // })
       .then(response => response.data)
       .then(data => {
-        setData(data);
+        const sortedData = data.sort((a, b) => b.score - a.score);
+        setData(sortedData);
         setLoading(false);
       })
       .catch(error => {
@@ -41,16 +42,16 @@ const Result = () => {
       });
   },[]);
 
+
   if (loading) return (
   <div style={{color: "#252525", textAlign: 'center'}}>Loading...</div>
 );
   if (error) return <div>Error: {error.message}</div>;
   if(!localStorage.getItem('accessToken')) 
-   navigate('/login')
+   navigate('/')
   return (
     <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
-      <br /><br />
-      <h1>Resume List</h1>
+      <h1 style={{color: '#7f56da' }}>Resume List</h1>
       <ResumeList data={data} />
     </div>
     

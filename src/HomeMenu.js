@@ -22,6 +22,7 @@ class MenuLinks extends React.Component {
         }, {
           text: 'Upload',
           link: '/Upload',
+          // link: 'http://localhost:8000/docs#/Recruiter/get_uploaded_resumes_list_uploadresumes__list_name__post',
           icon: 'fa-github'
         }, {
           text: 'About',
@@ -85,7 +86,7 @@ class MenuLinks extends React.Component {
             <div className="hambclicker" onClick={ this._menuToggle }></div>
             <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
             <div className="title">
-              <span>{ this.props.title }</span>
+              <h1 style={{paddingTop:8}}>{this.props.title }</h1>
             </div>
             {this.props.tag }
           </div>
