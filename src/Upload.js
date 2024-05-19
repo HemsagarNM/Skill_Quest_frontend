@@ -4,58 +4,56 @@ import axios from 'axios';
 import './index.css'
 
 
-const Upload = () => {
-    const [files, setFiles] = useState (null);
-    const [ progress, setProgress ] = useState({ started: false, pc: 0 });
-    const [msg, setMsg ] = useState(null);
-    const FormData = require('form-data');
-    // const fs = require('fs');
-    const handleUpload = async() => {
-        if (!files) {
-        setMsg("No file selected");
-        return;
-        }
-        const data = new FormData();
-        for (let i=0; i<files.length; i++) {
-            data.append('files', (files[i]));
-        }
-        setMsg("Uploading...");
-        const token = localStorage.getItem('accessToken');
-        console.log(`Bearer ${token}`)
-        setProgress (prevstate => {
-        return {...prevState, started: true}
-        })
-    
-       
-        try {
-         await axios.post(`http://127.0.0.1:8000/list/uploadresumes/Research`,{
-            headers: { 
-                'Authorization' : 
-                // 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJhY2Nlc3NfbGV2ZWwiOjIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9za2lsbHF1ZXN0LWNjYmVkIiwiYXVkIjoic2tpbGxxdWVzdC1jY2JlZCIsImF1dGhfdGltZSI6MTcxNTg4ODkzOCwidXNlcl9pZCI6Ijg4R3ZiYW10ekRUb0Z1QzZtdHZLMk1lTGFmRjMiLCJzdWIiOiI4OEd2YmFtdHpEVG9GdUM2bXR2SzJNZUxhZkYzIiwiaWF0IjoxNzE1ODg4OTM4LCJleHAiOjE3MTU4OTI1MzgsImVtYWlsIjoiaGVtc2FnYXJnb3dkYTI0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImhlbXNhZ2FyZ293ZGEyNEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.b8fvY84rc-I8U2kYNN7241qk-fA9qRsAPta0yBCYgtLfQUPyUz5nadUBTcSK8ugf1VtThNVFst4cQiujYiPyTDF-emiR1svH5-0F5uKb96gce7rOW1iJEp39VjmHz3L3Qmo_BJrVv1Hh0AGk0hj8jsObCNAxsbiNf2hF_TalHThXpDBdI9rNVBKOT_JOCh5AITUn72XVkt_J5qKl5T4iWwTyFgkqKM3yQpJaUYNBkOQVlFYchTLtISJDiRWzuP3Dp5MwEIpkHqgfFxiZ9vLhEu_qTp4O_hSc-j3l-YF6P48gX99kguxFY7M_R2dwCGps71be_zm4HABl30AJ1qHejQ'
-                `Bearer ${token}`
-              } , data
-          }
-          )
-          .then((response) => {
-                    setMsg("Upload Successful");
-                    console.log(response.data);
-            })
-        }
-            catch(err) {
-                setMsg("Upload failed");
-                console.error(err);
-            }
-        }
-    return(
-        <div className="UploadStyle" >
-    <h1>Upload Resumes</h1><br/>
-    <input onChange={ (e) => { setFiles(e.target.files) } } type="file" multiple/>
-    <br/>
-    <button className="UploadButton" onClick={ handleUpload } > Upload </button>
-    { progress.started && <progress max="100" value={progress.pc}> </progress>}
-    { msg && < span>{msg}</span> }
-    </div>
-    );
-}
+import React, { useState } from 'react';
+import axios from 'axios';
 
-export default Upload
+const FileUpload = () => {
+  const [selectedFiles, setSelectedFiles] = useState(null);
+  const [textInput, setTextInput] = useState("");
+
+  const handleFileChange = (event) => {
+    setSelectedFiles(event.target.files);
+  };
+  const handleTextChange = (event) => {
+    setTextInput(event.target.value);
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFiles) {
+      alert("Please select files first!");
+      return;
+    }
+
+    let data = new FormData();
+    for (let i = 0; i < selectedFiles.length; i++) {
+      data.append('files', selectedFiles[i]);
+    }
+
+    try {
+      const response = await axios.post(`http://localhost:8000/list/uploadresumes/${textInput}`, data, {
+        headers: {
+          'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJhY2Nlc3NfbGV2ZWwiOjIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9za2lsbC1xdWVzdC1ocml0aGlrIiwiYXVkIjoic2tpbGwtcXVlc3QtaHJpdGhpayIsImF1dGhfdGltZSI6MTcxNjA2NTM5MywidXNlcl9pZCI6IllZbmY3RWc3SjFaQkNjVmFWeFlQNUU0VW1XbDEiLCJzdWIiOiJZWW5mN0VnN0oxWkJDY1ZhVnhZUDVFNFVtV2wxIiwiaWF0IjoxNzE2MDY1MzkzLCJleHAiOjE3MTYwNjg5OTMsImVtYWlsIjoiaHJpdGhpa3NoZXQxMUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJocml0aGlrc2hldDExQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.n8i-f2e0S5hQjKU4sNMcgtajXTTxiPuBU0EPQUFLLFmgdKtnGHF11oQ0Yti0sf15VjA46jNKsU5NwDDLCYMzv-lGFFOYlLrz7XwusdpA7hJNxaR3vC3yzQxOCN27s2VAd6IRJdwZavgHiZjbXx8ORoLFpuqNG5IO8CxpWKIfFAG_MZLcVA1JuR7jjIMGgMQUVaL7lmyVk1zSSSf6zKH5MJRA8TMpPJgptR5sWxfqg7q9kQkNkGII9SE2KM_bcE1HZKViNTnOqh8fOMtSFxK2KWzd-jAAxFtVuGtmvUCF0ImkJX2NhH2NxR24cElesnAfuoslQQj8F3DLUB6VC-1dFQ',
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error("Error uploading files:", error);
+    }
+  };
+
+   
+
+  return (
+    <div className="UploadStyle">
+        <h1>Upload Resumes</h1><br/>
+      <input type="file" multiple onChange={handleFileChange} />
+      <button onClick={handleUpload}>Upload Files</button>
+      { progress.started && <progress max="100" value={progress.pc}> </progress>}
+        { msg && < span>{msg}</span> }
+      <input type="text" value={textInput} onChange={handleTextChange} placeholder="Enter text" />
+    </div>
+  );
+};
+
+export default FileUpload;
