@@ -65,12 +65,16 @@ const FileUpload = () => {
 
   return (
     <div className="UploadStyle">
-        <h1>Upload Resumes</h1><br/>
-      <input type="file" multiple onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload Files</button>
+        <h1 className="large-heading">Upload Resumes</h1><br/>
+        <input type="text" value={textInput} className='Uploadtxt' onChange={handleTextChange} placeholder="Enter List Name" />
+        <br/><br/>
+      <input type="file" multiple onChange={handleFileChange} className='filebtn'/>
+      <br/><br/>
+      <button onClick={handleUpload} className='UploadButton'>Upload Files</button>
+      <br/>
       { progress.started && <progress max="100" value={progress.pc}> </progress>}
-        { msg && < span>{msg}</span> }
-      <input type="text" value={textInput} onChange={handleTextChange} placeholder="Enter text" />
+       <br></br><div className='upload_msg'>{ msg && <p>{msg}</p>}</div> 
+      
     </div>
   );
 };
