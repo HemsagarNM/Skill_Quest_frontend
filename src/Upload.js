@@ -2,9 +2,16 @@ import { useState ,prevState } from 'react';
 import * as React from 'react';
 import axios from 'axios';
 import './index.css'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const FileUpload = () => {
+    const navigate=useNavigate()
+    useEffect(()=>{
+        if(!localStorage.getItem('accessToken')) 
+            navigate('/');
+      });
     const [ progress, setProgress ] = useState({ started: false, pc: 0 });
     const [msg, setMsg ] = useState(null);
   const [selectedFiles, setSelectedFiles] = useState(null);
