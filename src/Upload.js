@@ -8,17 +8,17 @@ import { useNavigate } from 'react-router-dom';
 
 const FileUpload = () => {
     const navigate=useNavigate()
-    useEffect(()=>{
-        if(!localStorage.getItem('accessToken')) 
-            navigate('/');
-      });
+    // useEffect(()=>{
+    //     if(!localStorage.getItem('accessToken')) 
+    //         navigate('/');
+    //   });
     const [ progress, setProgress ] = useState({ started: false, pc: 0 });
     const [msg, setMsg ] = useState(null);
-  const [selectedFiles, setSelectedFiles] = useState(null);
+  const [selectedFiles, setSelectedFiles] = useState([]);
   const [textInput, setTextInput] = useState("");
 
   const handleFileChange = (event) => {
-    setSelectedFiles(event.target.files);
+    setSelectedFiles(Array.from(event.target.files));
   };
   const handleTextChange = (event) => {
     setTextInput(event.target.value);
@@ -33,9 +33,9 @@ const FileUpload = () => {
     
 
     let data = new FormData();
-    for (let i = 0; i < selectedFiles.length; i++) {
-      data.append('files', selectedFiles[i]);
-    }
+    selectedFiles.forEach(file => {
+        data.append('files', file);
+      });
     const accessToken = localStorage.getItem('accessToken');
 
     setMsg("Uploading...");
@@ -71,18 +71,31 @@ const FileUpload = () => {
    
 
   return (
+    <p>
     <div className="UploadStyle">
         <h1 className="large-heading">Upload Resumes</h1><br/>
         <input type="text" value={textInput} className='Uploadtxt' onChange={handleTextChange} placeholder="Enter List Name" />
         <br/><br/>
-      <input type="file" multiple onChange={handleFileChange} className='filebtn'/>
+      <input type="file" multiple onChange={handleFileChange} className='filebtn' style={{ display:'' }}/>
       <br/><br/>
       <button onClick={handleUpload} className='UploadButton'>Upload Files</button>
       <br/>
       { progress.started && <progress max="100" value={progress.pc}> </progress>}
        <br></br><div className='upload_msg'>{ msg && <p>{msg}</p>}</div> 
-      
+       
     </div>
+    { (selectedFiles.length > 1 ) &&
+    <div class="showUpload">  
+    <ol className="heading">
+    {selectedFiles.map((file,index) => (
+        <li key={index}  >
+        {file.name}
+        </li>
+      ))}
+      </ol>
+      </div>
+    }
+      </p>
   );
 };
 
