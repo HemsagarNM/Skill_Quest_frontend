@@ -1,0 +1,89 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+.dates, .marks{
+  text-align: right;
+}
+
+.two-column-container {
+  display: flex;
+}
+
+.left-column {
+  flex: 8;
+}
+.right-column {
+  flex: 2;
+}
+
+
+.education-item, .experience-item, .project-item {
+  margin-bottom: 10px;
+}
+
+.education-item h3, .experience-item h3, .project-item h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.education-item p, .experience-item p, .project-item p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+.dates
+{
+  text-align: right;
+  
+}
