@@ -48,7 +48,7 @@ const Result = () => {
    navigate('/')
   return (
     <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
-      <h1 style={{color: '#7f56da' }}>Resume List</h1>
+      <h1 style={{color: '#7f56da' }}> {list_name} Resume List</h1>
       <ResumeList data={data} />
     </div>
     
