@@ -53,7 +53,7 @@ const Lists = () => {
   return (
     <div className='list' style={{color: "#252525" ,  letterSpacing: 'normal'}}>
       <h1></h1><br/>
-      <ListContainer lists={lists} style={{AlignHorizontalCenter:'center'}}/>
+      <ListContainer lists={lists} />
     </div>
   );
 };
