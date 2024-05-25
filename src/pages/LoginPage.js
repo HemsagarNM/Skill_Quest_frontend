@@ -138,12 +138,12 @@ const LoginPage = ({ role }) => {
             setShowPopup(true)
             setLoader(false)
         }
-        else if (status === 'error') {
-            // setMessage("Network Error")
-            setShowPopup(true)
-            setLoader(false)
-            setGuestLoader(false)
-        }
+        // else if (status === 'error') {
+        //     // setMessage("Network Error")
+        //     setShowPopup(true)
+        //     setLoader(false)
+        //     setGuestLoader(false)
+        // }
     }, [status, currentRole, navigate, error, response, currentUser]);
 
     return (

@@ -52,6 +52,7 @@ const AdminRegisterPage = () => {
             })
         
             console.log('Signup successful:', response);
+            alert('Signup successful: Please Verify your Email')
             navigate('/');
             // Optionally handle success response
         } catch (error) {

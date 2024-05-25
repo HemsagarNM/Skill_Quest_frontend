@@ -78,9 +78,9 @@ const ChooseUser = ({ visitor }) => {
       }
     }
     else if (status === 'error') {
-      setLoader(false)
-      setMessage("Network Error")
-      setShowPopup(true)
+      //setLoader(false)
+      // setMessage("Network Error")
+      //setShowPopup(true)
     }
   }, [status, currentRole, navigate, currentUser]);
 
