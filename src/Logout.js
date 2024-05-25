@@ -6,9 +6,10 @@ import { useEffect
 const Logout = () =>{
     const navigate=useNavigate();
     console.log(localStorage.getItem('accessToken'))
+    
     useEffect(()=> {
         localStorage.clear();
-        navigate('/login');
+        navigate('/');
     }, []);
     console.log(localStorage.getItem('accessToken'))
     return;

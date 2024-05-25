@@ -10,8 +10,6 @@ import { LightPurpleButton } from '../../components/buttonStyles';
 import { registerUser } from '../../redux/userRelated/userHandle';
 import styled from 'styled-components';
 import Popup from '../../components/Popup';
-// import axios from 'axios';
-//const axios = require('axios')
 import axios from 'axios';
 
 const defaultTheme = createTheme();
@@ -84,7 +82,7 @@ const AdminRegisterPage = () => {
 
     useEffect(() => {
         if (status === 'success' || (currentUser !== null && currentRole === 'Admin')) {
-            navigate('/Admin/dashboard');
+            navigate('/login');
         }
         else if (status === 'failed') {
             setMessage(response)
@@ -202,7 +200,7 @@ const AdminRegisterPage = () => {
                                     Already have an account?
                                 </Grid>
                                 <Grid item sx={{ ml: 2 }}>
-                                    <StyledLink to="/Adminlogin">
+                                    <StyledLink to="/login">
                                         Log in
                                     </StyledLink>
                                 </Grid>

@@ -9,7 +9,6 @@ import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
 import Menu from './HomeMenu';
-import Upload from './Upload';
 import Home from './Home';
 import Result from './pages/ResultPage';
 import Logout from './Logout';

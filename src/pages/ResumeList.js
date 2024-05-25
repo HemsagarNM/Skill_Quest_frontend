@@ -14,7 +14,7 @@ const ResumeList = ({ data }) => {
           {item.CP.leetCode && (
             <div><strong>LeetCode Score:</strong> {item.CP.leetCode}</div>
           )}
-          <div><strong>Resume ID:</strong> {item.resume_id}</div>
+          {/* <div><strong>Resume ID:</strong> {item.resume_id}</div> */}
         </div>
       ))}
     </div>

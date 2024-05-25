@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ResumeList from './ResumeList';
 import '../index.css';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
-import { Button } from '@mui/material';
-import Menu from '../HomeMenu';
 import { useParams } from 'react-router-dom';
 
 
