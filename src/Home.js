@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <StyledContainer>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
+                <Grid item xs={12} md={6} style={{marginLeft:'70px' , marginTop:'15px'}} >
                     <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
                 </Grid>
                 {/* <Grid item xs={12} md={6}>
