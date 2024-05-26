@@ -30,8 +30,8 @@ const App = () => {
           <Route path="/Studentlogin" element={<LoginPage role="Applicant" />} />
           <Route path="/Teacherlogin" element={<LoginPage role="Recruiter" />} />
 
-          <Route path="/Adminregister" element={<AdminRegisterPage />} />
-          <Route path="/home" element={<Menu title= 'A Streamline Recruitment using Pre-Trained Transformers' tag = {<Home />} />} />
+          <Route path="/Register" element={<AdminRegisterPage />} />
+          <Route path="/home" element={<Menu title= 'A Streamline Recruitment using Transformers' tag = {<Home />} />} />
           <Route path='/Upload' element={<Menu title='Upload' tag={ <FileUpload /> } />} />
           <Route path='/Results' element={<Menu title ='Result' tag={<Result />}/>}/>
           <Route path='/logout' element={<Logout />}/>

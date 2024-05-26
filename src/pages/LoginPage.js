@@ -161,7 +161,7 @@ const LoginPage = ({ role }) => {
                         }}
                     >
                         <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
-                            {role} Login
+                            Login
                         </Typography>
                         <Typography variant="h7">
                             Welcome back! Please enter your details
@@ -244,7 +244,7 @@ const LoginPage = ({ role }) => {
                                     label="Remember me"
                                 />
                                 <StyledLink href="#">
-                                    Forgot password?
+                                    
                                 </StyledLink>
                             </Grid>
                             <LightPurpleButton
@@ -271,7 +271,7 @@ const LoginPage = ({ role }) => {
                                         Don't have an account?
                                     </Grid>
                                     <Grid item sx={{ ml: 2 }}>
-                                        <StyledLink to="/Adminregister">
+                                        <StyledLink to="/Register">
                                             Sign up
                                         </StyledLink>
                                     </Grid>

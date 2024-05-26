@@ -81,7 +81,7 @@ class MenuLinks extends React.Component {
       let menuStatus = this.state.isOpen ? 'isopen' : '';
   
       return (
-        <div ref="root">
+        <div ref="root" className='root'>
           <div className="menubar">
             <div className="hambclicker" onClick={ this._menuToggle }></div>
             <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
