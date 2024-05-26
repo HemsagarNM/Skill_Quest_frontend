@@ -5,9 +5,9 @@ const CodingPlatformLinks = ({cpl}) => {
     <section>
       <h2>Coding Platforms</h2>
         <div>
-            <p><b>Leetcode</b> - {cpl.leetcode ?cpl.leetcode:"no account"}</p>
-            <p><b>Codechef</b> - {cpl.codechef?cpl.codechef:"no account"}</p>
-            <p><b>Codeforces</b> - {cpl.codeforces?cpl.codeforces:"no account"}</p>
+            <p><b>Leetcode</b> - {cpl.leetCode ?cpl.leetCode:"no account"}</p>
+            <p><b>Codechef</b> - {cpl.codeChef?cpl.codeChef:"no account"}</p>
+            <p><b>Codeforces</b> - {cpl.codeForces?cpl.codeForces:"no account"}</p>
         </div>
     </section>
   )
