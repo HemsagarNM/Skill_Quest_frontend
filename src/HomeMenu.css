@@ -18,10 +18,21 @@ body {
 .menubar {
   display: block;
   height: 60px;
-  background-color: #7f56da;
   box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
   position: relative;
+} 
+
+.title{
+  display: block;
+  height: 60px;
+  background-color: #7f56da;
+  box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: fixed;
+  transform: translateX(-20%);
+  transform: translateX(0%);
+  width: 100%;
 }
 
 .menubar span {
