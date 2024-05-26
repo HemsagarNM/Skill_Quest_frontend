@@ -15,18 +15,9 @@ const Home = () => {
     return (
         <StyledContainer>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6} style={{marginLeft:'70px' , marginTop:'15px'}} >
+                <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
                     <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
                 </Grid>
-                {/* <Grid item xs={12} md={6}>
-                    <StyledPaper elevation={4}>
-                        <StyledTitle>
-                        </StyledTitle>
-                        <StyledText>
-                            
-                        </StyledText>
-                    </StyledPaper>
-                </Grid> */}
             </Grid>
         </StyledContainer>
     );
@@ -39,6 +30,7 @@ const StyledContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 `;
 
 const StyledPaper = styled.div`

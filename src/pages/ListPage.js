@@ -8,8 +8,8 @@ import Result from './ResultPage';
 import { alignProperty } from '@mui/material/styles/cssUtils';
 import { AlignHorizontalCenter } from '@mui/icons-material';
 
-
-
+const CACHE_KEY = 'listsCache';
+const CACHE_EXPIRY = 1000 * 60 * 60;
 
 const Lists = () => {
     const navigate= useNavigate();
@@ -28,6 +28,15 @@ const Lists = () => {
   }
 
   useEffect(() => {
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      const { data, timestamp } = JSON.parse(cachedData);
+      if (Date.now() - timestamp < CACHE_EXPIRY) {
+        setLists(data);
+        setLoading(false);
+        return;
+      }
+    }
     axios.get('http://127.0.0.1:8000/list/',{
      headers: {
            'Authorization': `Bearer ${BEARER_TOKEN}`
@@ -38,6 +47,7 @@ const Lists = () => {
          const sortedListNames = data.sort((a, b) => a.localeCompare(b));
         setLists(sortedListNames);
         setLoading(false);
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ data: sortedListNames, timestamp: Date.now() }));
       })
       .catch(error => {
         setError(error);
@@ -47,8 +57,12 @@ const Lists = () => {
 
   if (loading) return <div style={{color:'black'}}>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-  if(!localStorage.getItem('accessToken')) 
-   navigate('/login')
+  if(!localStorage.getItem('accessToken'))
+    {
+      navigate('/login');
+      return null;
+    }
+  
 
   return (
     <div className='list' style={{color: "#252525" ,  letterSpacing: 'normal'}}>
