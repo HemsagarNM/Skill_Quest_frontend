@@ -16,6 +16,8 @@ import Lists from './pages/ListPage';
 import FileUpload from './Upload';
 import ResumeView from './pages/ResumeView';
 import ResumeDetailsPage from './pages/ResumeDetails';
+
+
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
