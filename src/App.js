@@ -23,13 +23,7 @@ const App = () => {
       {currentRole === null &&
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/choose" element={<ChooseUser visitor="normal" />} />
-          <Route path="/chooseasguest" element={<ChooseUser visitor="guest" />} />
-
           <Route path="/login" element={<LoginPage role="Admin" />} />
-          <Route path="/Studentlogin" element={<LoginPage role="Applicant" />} />
-          <Route path="/Teacherlogin" element={<LoginPage role="Recruiter" />} />
-
           <Route path="/Register" element={<AdminRegisterPage />} />
           <Route path="/home" element={<Menu title= 'A Streamline Recruitment using Transformers' tag = {<Home />} />} />
           <Route path='/Upload' element={<Menu title='Upload' tag={ <FileUpload /> } />} />
@@ -48,7 +42,7 @@ const App = () => {
         </>
       }
 
-      {currentRole === "Student" &&
+      {/* {currentRole === "Student" &&
         <>
           <StudentDashboard />
         </>
@@ -58,7 +52,7 @@ const App = () => {
         <>
           <TeacherDashboard />
         </>
-      }
+      } */}
     </Router>
   )
 }
