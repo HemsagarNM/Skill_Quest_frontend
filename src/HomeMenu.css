@@ -106,18 +106,33 @@ body {
 }
 
 #menu ul {
-  margin-top: 0px;
-  padding: 0px;
-  color: black;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
   text-align: left;
 }
 
 #menu li {
-  padding: 30px 0 20px 20px;
-  font-size: 1.5em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.14); */
+  border-radius: 15px; /* Add border-radius to the menu items */
 }
+#menu li:hover {
+  background-color: #a17de8;
+  color: #00ff00;
+}
+#menu li:last-child {
+  border-bottom: none;
+}
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
 
 #menu li:last-child {
   border-bottom: none;
