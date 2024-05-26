@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 import Lists from "./pages/ListPage";
-
+import home from './assets/home-1-svgrepo-com.svg'
+import getlis from './assets/document-text-svgrepo-com.svg'
+import logout from './assets/logout-3-svgrepo-com.svg'
+import upload from './assets/upload-svgrepo-com.svg'
+import about from './assets/info-circle-svgrepo-com.svg'
 class MenuLinks extends React.Component {
     constructor(props) {
       super(props);
@@ -14,30 +18,33 @@ class MenuLinks extends React.Component {
         links: [{
             text: 'Home',
             link: "/home",
-            icon: 'fa-pencil-square-o'
+            icon: home,
         },{
           text: 'GET List',
           link: '/list',
-          icon: 'fa-pencil-square-o'
+          icon: getlis,
         }, {
           text: 'Upload',
           link: '/Upload',
-          // link: 'http://localhost:8000/docs#/Recruiter/get_uploaded_resumes_list_uploadresumes__list_name__post',
-          icon: 'fa-github'
+
+          icon: upload,
         }, {
           text: 'About',
           link: '/Results',
-          icon: 'fa-twitter'
+          icon: about,
         },
         {
             text: 'LogOut',
             link: '/logout',
-            icon: 'fa-twitter'
+            icon: logout,
           }]
       }
     }
     render() {
-      let links = this.state.links.map((link, i) => <li ref={i + 1}><i aria-hidden="true" className={`fa ${ link.icon }`}></i><Link to={link.link}>{link.text}</Link></li>);
+      let links = this.state.links.map((link, i) => <li ref={i + 1}>
+        <i aria-hidden="true" className={`fa ${ link.icon }`}></i>
+        <img src={link.icon} alt={link.text} className="menu-icon" />
+      <Link to={link.link}>{link.text}</Link></li>);
   
       return (
           <div className={this.props.menuStatus} id='menu'>

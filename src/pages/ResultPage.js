@@ -19,7 +19,10 @@ const cacheKey = `${CACHE_KEY_PREFIX}${list_name}`;
 
   useEffect(() => {
   const cachedData = localStorage.getItem(cacheKey);
-    if (cachedData) {
+
+  const [navEntry] = performance.getEntriesByType('navigation');
+const isRefreshed = navEntry && navEntry.type === 'reload';
+    if (cachedData && !isRefreshed) {
       const { data, timestamp } = JSON.parse(cachedData);
       if (Date.now() - timestamp < CACHE_EXPIRY) {
         setData(data);
