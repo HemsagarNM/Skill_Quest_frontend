@@ -11,6 +11,9 @@ const ResumeList = ( props ) => {
   const list_name=props.list_name
   console.log(list_name)
   console.log(data)
+  const handleResumeClick = (resume_id) => {
+    navigate(`/resume/${resume_id}`);
+  };
   return (
     <div className="resume-list-container">
     <div className="resume-list" >
