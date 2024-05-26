@@ -18,7 +18,7 @@ body {
 .menubar {
   display: block;
   height: 60px;
-  box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12); */
   text-align: center;
   position: relative;
 } 
