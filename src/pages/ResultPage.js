@@ -49,7 +49,7 @@ const Result = () => {
   return (
     <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
       <h1 style={{color: '#7f56da' }}> {list_name} Resume List</h1>
-      <ResumeList data={data} />
+      <ResumeList data={data} list_name={list_name} />
     </div>
     
   );

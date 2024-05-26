@@ -5,8 +5,9 @@ import Experience from './Experience'
 import Projects from './Projects'
 import Skills from './Skills'
 import CodingPlatformLinks from './CodingPlatformLinks'
-
-const StandardResume = ({res}) => {
+import './resume.css' 
+const StandardResume = (res) => {
+  console.log(res.personalInfo)
   return (
     <div className="resume">
       <Header {...res.personalInfo} />

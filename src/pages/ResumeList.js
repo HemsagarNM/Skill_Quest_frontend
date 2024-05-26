@@ -12,11 +12,10 @@ const ResumeList = ( props ) => {
   console.log(list_name)
   console.log(data)
   return (
+    <div className="resume-list-container">
     <div className="resume-list" >
       {data.map((item, index) => (
-        <button key={index} className="resume-item" 
-         onClick={navigate(`/ResumeView/Developer/${item.resume_id}`)}
-        >
+        <div key={index} className="resume-item" onClick={() => handleResumeClick(item.resume_id)}        >
           <div><strong>Rank: </strong> {index+1}</div>
           <div><strong>Score:</strong> {item.score}</div>
           <div><strong>Institution:</strong> {item.education.institution}</div>
@@ -24,8 +23,9 @@ const ResumeList = ( props ) => {
             <div><strong>LeetCode Score:</strong> {item.CP.leetCode}</div>
           )}
           <div><strong>Resume ID:</strong> {item.resume_id}</div>
-        </button>
+        </div>
       ))}
+    </div>
     </div>
   );
 };

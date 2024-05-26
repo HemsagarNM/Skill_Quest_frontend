@@ -15,7 +15,7 @@ import Logout from './Logout';
 import Lists from './pages/ListPage';
 import FileUpload from './Upload';
 import ResumeView from './pages/ResumeView';
-
+import ResumeDetailsPage from './pages/ResumeDetails';
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
@@ -40,6 +40,7 @@ const App = () => {
           <Route path='/Results/:list_name' element={<Menu title ='Result' tag={<Result /> }/>}  />
           <Route path='/ResumeView' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path='/ResumeView/:list_name/:resume_id' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
+          <Route path="/resume/:id" element={<ResumeDetailsPage />} />
           {/* Component={Result} */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
