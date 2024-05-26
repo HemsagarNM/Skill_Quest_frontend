@@ -16,6 +16,7 @@ const FileUpload = () => {
     const [msg, setMsg ] = useState(null);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [textInput, setTextInput] = useState("");
+  const BEARER_TOKEN = localStorage.getItem('accessToken')
 
   const handleFileChange = (event) => {
     setSelectedFiles(Array.from(event.target.files));
