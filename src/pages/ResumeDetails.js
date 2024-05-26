@@ -24,7 +24,7 @@ const ResumeDetailsPage = () => {
     };
 
     fetchResume();
-  }, [id]);
+  });
 
   if (!resume) return <div>Loading...</div>;
 

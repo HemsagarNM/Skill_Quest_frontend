@@ -15,8 +15,8 @@ const Home = () => {
     return (
         <StyledContainer>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
-                    <img src={New} alt="Skill-Quest" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20', marginTop:'17px', marginLeft:'24%', height:'65%'}} />
+                <Grid item xs={12} md={6} style={{marginLeft:'70px', marginTop:'15px'}} >
+                    <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
                 </Grid>
             </Grid>
         </StyledContainer>

@@ -55,7 +55,7 @@ const Lists = () => {
       });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div style={{color:'black'}}>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   if(!localStorage.getItem('accessToken'))
     {
