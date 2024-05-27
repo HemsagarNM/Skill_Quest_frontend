@@ -7,7 +7,7 @@ import { Button } from '@mui/material';
 import Result from './ResultPage';
 import { alignProperty } from '@mui/material/styles/cssUtils';
 import { AlignHorizontalCenter } from '@mui/icons-material';
-
+import "./listcontainer.css"
 
 
 
@@ -70,7 +70,7 @@ const ListContainer = ({ lists }) => {
 
 const List = ({ name }) => {
   return (
-    <div className="list-item">
+    <div  className="list-item main-content">
       <Link to={`/Results/${name}`}>
       <h2>{name}</h2>
     </Link>
