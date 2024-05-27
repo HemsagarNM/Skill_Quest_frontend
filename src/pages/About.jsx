@@ -40,8 +40,8 @@ const About = () => {
         },
         {
           name: 'Hemsagar N M',
-          role: 'Front End Designer',
-          description: 'Design Front End erfgerfg ierfgiejrg ijerergiregji ergiregi ergij rgreig ijger grgg',
+          role: 'Full Stack Developer',
+          description: '',
           imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
         },
       ];
