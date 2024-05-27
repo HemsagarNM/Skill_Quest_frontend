@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import StandardResume from '../components/resumeComponents/StandardResume';
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 const BEARER_TOKEN = localStorage.getItem('accessToken');
 
 const ResumeDetailsPage = () => {

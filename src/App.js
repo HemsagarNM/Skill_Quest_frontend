@@ -17,6 +17,9 @@ import FileUpload from './Upload';
 import ResumeView from './pages/ResumeView';
 import ResumeDetailsPage from './pages/ResumeDetails';
 
+import About from './pages/About';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+console.log(BASE_URL)
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
@@ -40,6 +43,7 @@ const App = () => {
           <Route path='/ResumeView' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path='/ResumeView/:list_name/:resume_id' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path="/resume/:id" element={<ResumeDetailsPage />} />
+          <Route path="/About" element={<About />} />
           {/* Component={Result} */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}

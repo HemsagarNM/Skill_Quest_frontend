@@ -10,7 +10,8 @@ import styled from 'styled-components';
 import { loginUser } from '../redux/userRelated/userHandle';
 import Popup from '../components/Popup';
 import axios from 'axios';
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+console.log(BASE_URL)
 const defaultTheme = createTheme();
 
 const LoginPage = ({ role }) => {
