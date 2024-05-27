@@ -50,6 +50,7 @@ const About = () => {
 
           <div className="profiles">
             <h2>Meet Our Team</h2>
+            <br></br>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard
