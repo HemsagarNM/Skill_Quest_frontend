@@ -30,7 +30,7 @@ class MenuLinks extends React.Component {
           icon: upload,
         }, {
           text: 'About',
-          link: '/Results',
+          link: '/About',
           icon: about,
         },
         {
