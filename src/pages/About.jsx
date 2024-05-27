@@ -1,5 +1,6 @@
 import React from 'react'
 import "./About.css"
+import chethimg from "../../src/assets/Chethan_photo.jpg"
 const ProfileCard = ({ name, role, description, imageUrl }) => {
   return (
     <div className="profile-card">
@@ -28,9 +29,9 @@ const About = () => {
         },
         {
           name: 'Chethan A S',
-          role: 'Front End Designer',
-          description: 'Design front end',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          role: 'Front End Designer, Project Designer',
+          description: 'Design front end and overseeing the integration of the project',
+          imageUrl: chethimg,
         },
         {
           name: 'Hrithik U',
@@ -49,7 +50,7 @@ const About = () => {
       return (
 
           <div className="profiles">
-            <h2>Meet Our Team</h2>
+            <h2 className='profileHeading'>Meet Our Team</h2>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard
