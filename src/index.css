@@ -97,7 +97,9 @@ a {
 .App {
      text-align: center;
        padding: 5%;
-       background: url(../src/assets/3213337.jpg);
+       background: url(../src/assets/3.jpg);
+       min-height: 100vh;
+       height: auto;
 }
 
 
@@ -111,7 +113,8 @@ a {
 }
 
 .resume-item {
-  background-color: rgba(235, 247, 249, 0.955);
+  color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #0c0b0b;
   border-radius: 25px;
   padding: 15px;
@@ -123,7 +126,7 @@ a {
 }
 
 .resume-item:hover{
-  color: #f9f9f9;
+  color: #010101;
   background-color: #7f56da ;
 }
 
@@ -349,6 +352,7 @@ body {
   border: 8px solid #0000;
   border-right-color:#7f56da;
   position: relative;
+  align-items: center;
   animation: l24 1s infinite linear;
   position: fixed;
         top: 50%;

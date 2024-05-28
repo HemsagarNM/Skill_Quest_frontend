@@ -41,7 +41,7 @@ const Result = () => {
         const sortedData = data.sort((a, b) => b.score - a.score);
         setData(sortedData);
         setLoading(false);
-        localStorage.setItem(CACHE_KEY, JSON.stringify({ data: sortedData, timestamp: Date.now() }));
+        //localStorage.setItem(CACHE_KEY, JSON.stringify({ data: sortedData, timestamp: Date.now() }));
       })
       .catch(error => {
         setLoading(false);
@@ -60,15 +60,12 @@ const Result = () => {
 }
    
   return (
-    // <div className='main-content'>
-    // <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
-
-    <div className="App main-content" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
-      
+    <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
+    <div className='main-content'>
       <h1 style={{color: '#7f56da' }}> {list_name} Resume List</h1>
       <ResumeList data={data} list_name={list_name} />
     </div>
-    // </div>
+    </div>
   );
 };
 
