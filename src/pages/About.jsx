@@ -3,7 +3,7 @@ import "./About.css"
 import chethimg from "../../src/assets/Chethan_photo.jpg"
 import navimg from "../../src/assets/naveen_pic.jpg"
 import hritimg from "../../src/assets/Hrithik_pic.jpeg"
-import hemimg from "../../src/assets/hemsagar_pic.jpg"
+import hemimg from "../../src/assets/hemimg.jpeg"
 import { useEffect, useNavigate } from 'react'
 
 const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
@@ -13,11 +13,10 @@ const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
         <img src={imageUrl} alt={`${name}'s profile`} className="profile-image" />
         
         <div className="profile-info">
-          <h3>{name}</h3>
+        <div className='LinkedInUrl'>
+          <h3><a href={linkedinURL}>{name}</a></h3>
+          </div>
           <h4>{role}</h4>
-          <div className='LinkedInUrl'>
-          <a href={linkedinURL}>{name}'s LinkedIn Profile</a>
-            </div>
         </div>
         <div className="profile-description">
                 {description}
@@ -67,12 +66,8 @@ const About = () => {
 
 
           <div className="profiles main-content">
-<<<<<<< HEAD
             <h2 style={{color: 'white'}}>Meet Our Team</h2>
             <br></br>
-=======
-            <div className='aboutTitle'><h2>Meet Our Team</h2></div>
->>>>>>> e19005fa77ae85a697e43496eecb7c4817327dfa
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard

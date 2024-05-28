@@ -110,6 +110,12 @@
 .profile-card:hover{
     transition: all .1s ease;
     transform: scale(1.1);
+    .LinkedInUrl {
+      transition: all .1s ease;
+      /* background: #a17de8; */
+      /* -webkit-transform: scale(1.2); */
+      transform: scale(1.5);
+    }
 }
 
 
@@ -131,10 +137,8 @@
 .LinkedInUrl:hover {
   transition: all .1s ease;
   /* background: #a17de8; */
-  text-decoration: underline;
-  text-decoration-color: #a17de8;
   /* -webkit-transform: scale(1.2); */
-  transform: scale(1.3);
+  transform: scale(1.5);
 }
 
 
