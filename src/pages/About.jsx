@@ -48,7 +48,7 @@ const About = () => {
     
       return (
 
-          <div className="profiles">
+          <div className="profiles main-content">
             <h2>Meet Our Team</h2>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
