@@ -67,7 +67,8 @@ const About = () => {
       return (
 
 
-          <div className="profiles main-content">
+          <div className="profiles">
+            <div className='main-content'>
             <h2 style={{color: 'white'}}>Meet Our Team</h2>
             <br></br>
             <div className="profile-cards">
@@ -82,6 +83,7 @@ const About = () => {
                 />
       
               ))}
+            </div>
             </div>
           </div>
       );
