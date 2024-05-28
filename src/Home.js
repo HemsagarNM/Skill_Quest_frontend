@@ -13,7 +13,9 @@ const Home = () => {
   });
   if(!localStorage.getItem('accessToken') || localStorage.getItem('accessToken')== undefined) navigate('/login');
     return (
-        <StyledContainer className="main-content">
+        <StyledContainer 
+        // className="main-content"
+        >
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
                     <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
