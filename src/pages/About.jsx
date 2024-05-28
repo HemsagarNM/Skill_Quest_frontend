@@ -27,8 +27,8 @@ const About = () => {
     const profiles = [
         {
           name: 'A Naveen',
-          role: 'Team Lead,Project Designer',
-          description: 'oversees the project and developing backend algorithm ',
+          role: 'Team Lead, Project Designer',
+          description: 'Oversees the project and developing backend ',
           imageUrl: navimg,
         },
         {
@@ -45,7 +45,7 @@ const About = () => {
         },
         {
           name: 'Hemsagar N M',
-          role: 'Front End Designer ',
+          role: 'Full Stack Developer',
           description: 'Design Front End and integrating API calls to backend',
           imageUrl: hemimg,
         },
@@ -55,7 +55,7 @@ const About = () => {
 
 
           <div className="profiles main-content">
-            <h2>Meet Our Team</h2>
+            <h2 style={{color: 'white'}}>Meet Our Team</h2>
             <br></br>
             <div className="profile-cards">
               {profiles.map((profile, index) => (

@@ -72,7 +72,7 @@
   background-size: cover;
   background-position: center;
   /* min-height: 100vh; */
-  margin: 0; /* Remove margin */
+  padding-top: 7%; /* Remove margin */
   min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
