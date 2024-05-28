@@ -58,11 +58,12 @@ localStorage.setItem(cacheKey, JSON.stringify({ data: sortedData, timestamp: Dat
 }
    
   return (
+    <div className='main-content'>
     <div className="App" style={{color: "#252525" ,  letterSpacing: 'normal'}}>
       <h1 style={{color: '#7f56da' }}> {list_name} Resume List</h1>
       <ResumeList data={data} list_name={list_name} />
     </div>
-    
+    </div>
   );
 };
 

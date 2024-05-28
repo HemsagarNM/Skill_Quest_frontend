@@ -97,7 +97,9 @@ class Menu extends React.Component {
             <div className="hambclicker" onClick={ this._menuToggle }></div>
             <div className="title">
             <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
-              <h1 style={{paddingTop:8}}> {this.props.title } </h1>
+            <div className='main-content'> 
+            <h1 style={{paddingTop:8}}> {this.props.title } </h1>
+            </div>
             </div>
             <div>
             {this.props.tag }</div>
