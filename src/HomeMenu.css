@@ -42,7 +42,7 @@ body {
   transform: translateX(-50%);
   font-weight: 300;
   font-size: 2em;
-  line-height: 60px;
+  line-height: 70px;
 }
 
 #hambmenu {
@@ -116,7 +116,7 @@ body {
 }
 
 #menu {
-  position: absolute;
+  position: fixed;
   height: calc(100vh - 60px);
   width: 210px;
   background-color: white;
@@ -177,4 +177,17 @@ li a {
   .menubar span {
     font-size: 1.2em;
   }
+}
+#menu.isopen {
+  transform: translateX(0);
+}
+
+/* Main content adjustments */
+.main-content {
+  transition: margin-left 300ms;
+  margin-left: 0; /* Default margin when menu is closed */
+}
+
+.menu-open .main-content {
+  margin-left: 210px; /* Push content when menu is open */
 }

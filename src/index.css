@@ -305,7 +305,7 @@ body {
 }
 
 .heading{
-  background: linear-gradient(120deg, hsl(260 70% 70%), hsl(0 100% 80%));
+  background: linear-gradient(120deg, #a17de8, hsl(0 100% 80%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

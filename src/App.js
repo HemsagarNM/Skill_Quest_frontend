@@ -43,7 +43,7 @@ const App = () => {
           <Route path='/ResumeView' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path='/ResumeView/:list_name/:resume_id' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path="/resume/:id" element={<ResumeDetailsPage />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/About" element={<Menu title ='About' tag={ <About />}/> } />
           {/* Component={Result} */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}

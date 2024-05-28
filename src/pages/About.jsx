@@ -1,5 +1,10 @@
 import React from 'react'
 import "./About.css"
+import chethimg from "../../src/assets/Chethan_photo.jpg"
+import navimg from "../../src/assets/naveen_pic.jpg"
+import hritimg from "../../src/assets/Hrithik_pic.jpeg"
+import hemimg from "../../src/assets/hemsagar_pic.jpg"
+
 const ProfileCard = ({ name, role, description, imageUrl }) => {
   return (
     <div className="profile-card">
@@ -22,33 +27,34 @@ const About = () => {
     const profiles = [
         {
           name: 'A Naveen',
-          role: 'Tech Lead,Project Designer',
-          description: 'oversees the project dskfrfn erkfjerifj fdgijerfiwfdjwe  gjirgjrej g erigjerij giejrg ',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          role: 'Team Lead,Project Designer',
+          description: 'oversees the project and developing backend algorithm ',
+          imageUrl: navimg,
         },
         {
           name: 'Chethan A S',
-          role: 'Front End Designer',
-          description: 'Design front end',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          role: 'Front End Designer, Project Designer',
+          description: 'Design front end and overseeing the integration of the project',
+          imageUrl: chethimg,
         },
         {
           name: 'Hrithik U',
           role: 'Front End Designer',
-          description: 'Design front end rfgrig  roegk rigk rgokr gk reogk regkk ekr oergoreg ',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          description: 'Design front end and integrating LLM ',
+          imageUrl: hritimg,
         },
         {
           name: 'Hemsagar N M',
-          role: 'Full Stack Developer',
-          description: '',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          role: 'Front End Designer ',
+          description: 'Design Front End and integrating API calls to backend',
+          imageUrl: hemimg,
         },
       ];
     
       return (
 
-          <div className="profiles">
+
+          <div className="profiles main-content">
             <h2>Meet Our Team</h2>
             <br></br>
             <div className="profile-cards">

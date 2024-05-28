@@ -72,7 +72,9 @@ const FileUpload = () => {
    
 
   return (
-    <p className='Upload'>
+
+    // <p className='Upload'>
+    <p className="main-content">
     <div className="UploadStyle">
         <h1 className="large-heading">Upload Resumes</h1><br/>
         <input type="text" value={textInput} className='Uploadtxt' onChange={handleTextChange} placeholder="Enter List Name" />
