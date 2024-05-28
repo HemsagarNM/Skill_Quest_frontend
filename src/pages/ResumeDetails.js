@@ -26,7 +26,7 @@ const ResumeDetailsPage = () => {
     fetchResume();
   });
 
-  if (!resume) return <div>Loading...</div>;
+  if (!resume) return <div class='hourglass'></div>;
 
   return <StandardResume {...resume} />;
 };
