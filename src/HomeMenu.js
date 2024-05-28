@@ -95,13 +95,12 @@ class Menu extends React.Component {
         <div ref="root" className='root'>
           <div className="menubar">
             <div className="hambclicker" onClick={ this._menuToggle }></div>
-            <div className="titlemain">
-            <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
             <div className="title">
-              <h1 style={{paddingTop:8}}>{this.props.title }</h1>
+            <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
+              <h1 style={{paddingTop:8}}> {this.props.title } </h1>
             </div>
-            </div>
-            {this.props.tag }
+            <div>
+            {this.props.tag }</div>
           </div>
           <MenuLinks menuStatus={ menuStatus }/>
         </div>

@@ -13,6 +13,10 @@ const CACHE_EXPIRY = 1000 * 60 * 60;
 
 const Lists = () => {
     const navigate= useNavigate();
+    useEffect(()=>{
+        if(!localStorage.getItem('accessToken')) 
+            navigate('/');
+      });
   const [lists, setLists] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -86,7 +90,9 @@ const ListContainer = ({ lists }) => {
 
 const List = ({ name }) => {
   return (
-    <div  className="list-item main-content">
+    <div  className="list-item" 
+    // main-content"
+    >
       <Link to={`/Results/${name}`}>
       <h2>{name}</h2>
     </Link>

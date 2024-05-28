@@ -16,6 +16,7 @@ import Lists from './pages/ListPage';
 import FileUpload from './Upload';
 import ResumeView from './pages/ResumeView';
 import ResumeDetailsPage from './pages/ResumeDetails';
+
 import About from './pages/About';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 console.log(BASE_URL)

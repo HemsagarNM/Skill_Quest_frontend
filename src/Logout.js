@@ -6,11 +6,10 @@ import { useEffect
 const Logout = () =>{
     const navigate=useNavigate();
     console.log(localStorage.getItem('accessToken'))
-    
+    alert("Logged out SuccessFully!")
     useEffect(()=> {
         localStorage.clear();
         navigate('/');
-        alert("Logged out SuccessFully!")
     }, []);
     console.log(localStorage.getItem('accessToken'))
     return;

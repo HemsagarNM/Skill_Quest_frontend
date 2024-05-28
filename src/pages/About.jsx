@@ -3,20 +3,22 @@ import "./About.css"
 import chethimg from "../../src/assets/Chethan_photo.jpg"
 import navimg from "../../src/assets/naveen_pic.jpg"
 import hritimg from "../../src/assets/Hrithik_pic.jpeg"
-import hemimg from "../../src/assets/hemsagar_pic.jpg"
+import hemimg from "../../src/assets/hemimg.jpeg"
+import { useEffect, useNavigate } from 'react'
 
 const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
   return (
+    
     <div className="profile-card">
+      <a href={linkedinURL} > 
       <div className="profile-header">
         <img src={imageUrl} alt={`${name}'s profile`} className="profile-image" />
         
         <div className="profile-info">
-          <h3>{name}</h3>
+        <div className='LinkedInUrl'>
+          <h3> {name} </h3>
+          </div>
           <h4>{role}</h4>
-          <div className='LinkedInUrl'>
-          <a href={linkedinURL}>{name}'s LinkedIn Profile</a>
-            </div>
         </div>
         <div className="profile-description">
                 {description}
@@ -26,16 +28,16 @@ const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
             </div>
             
       </div>
-      
-    </div>
+      </a>
+    </div> 
   );
 };
 const About = () => {
     const profiles = [
         {
           name: 'A Naveen',
-          role: 'Team Lead,Project Designer',
-          description: 'oversees the project and developing backend algorithm ',
+          role: 'Team Lead, Project Designer',
+          description: 'Oversees the project and developing backend ',
           imageUrl: navimg,
           linkedinURL: 'https://www.linkedin.com/in/hizinberg',
         },
@@ -55,7 +57,7 @@ const About = () => {
         },
         {
           name: 'Hemsagar N M',
-          role: 'Front End Designer ',
+          role: 'Full Stack Developer',
           description: 'Design Front End and integrating API calls to backend',
           imageUrl: hemimg,
           linkedinURL: 'https://www.linkedin.com/in/hemsagarnm',
@@ -66,7 +68,8 @@ const About = () => {
 
 
           <div className="profiles main-content">
-            <div className='aboutTitle'><h2>Meet Our Team</h2></div>
+            <h2 style={{color: 'white'}}>Meet Our Team</h2>
+            <br></br>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard

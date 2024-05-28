@@ -18,10 +18,21 @@ body {
 .menubar {
   display: block;
   height: 60px;
+  /* box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12); */
+  text-align: center;
+  position: relative;
+} 
+
+.title{
+  display: block;
+  height: 60px;
   background-color: #7f56da;
   box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
-  position: relative;
+  position: fixed;
+  transform: translateX(-20%);
+  transform: translateX(0%);
+  width: 100%;
 }
 
 .menubar span {
@@ -125,12 +136,16 @@ body {
   align-items: center;
   padding: 15px 20px;
   font-size: 1.2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.14); */
   border-radius: 15px; /* Add border-radius to the menu items */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 #menu li:hover {
   background-color: #a17de8;
   color: #00ff00;
+  transform: translateY(5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 #menu li:last-child {
   border-bottom: none;
