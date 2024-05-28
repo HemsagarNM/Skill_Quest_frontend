@@ -3,7 +3,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     padding: 20px; 
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(239, 239, 239, 0.427);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5px);
     width:80%;
@@ -47,7 +47,7 @@
   
   .profile-info h4 {
     margin-top: 0;
-    color: #555;
+    color: #e5e5e5;
   }
   
   .profile-description {
@@ -67,7 +67,8 @@
 .profiles {
   padding: 40px;
   font-family: Arial, sans-serif;
-  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/488f115d-6e44-4ccd-b238-b2699af64966/d7bmuby-04d917d9-1cee-4f57-8296-ec8b7f0d2d1f.jpg/v1/fit/w_828,h_466,q_70,strp/web_developer_wallpaper__white__by_plusjack_d7bmuby-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvNDg4ZjExNWQtNmU0NC00Y2NkLWIyMzgtYjI2OTlhZjY0OTY2XC9kN2JtdWJ5LTA0ZDkxN2Q5LTFjZWUtNGY1Ny04Mjk2LWVjOGI3ZjBkMmQxZi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aDA41qJciYPZWWEIE_chmCMFsYL2mxzVVZxe1aVui3A');
+  /* background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/488f115d-6e44-4ccd-b238-b2699af64966/d7bmuby-04d917d9-1cee-4f57-8296-ec8b7f0d2d1f.jpg/v1/fit/w_828,h_466,q_70,strp/web_developer_wallpaper__white__by_plusjack_d7bmuby-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvNDg4ZjExNWQtNmU0NC00Y2NkLWIyMzgtYjI2OTlhZjY0OTY2XC9kN2JtdWJ5LTA0ZDkxN2Q5LTFjZWUtNGY1Ny04Mjk2LWVjOGI3ZjBkMmQxZi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aDA41qJciYPZWWEIE_chmCMFsYL2mxzVVZxe1aVui3A'); */
+  background-image: url('../../src/assets/971.jpg');
   background-size: cover;
   background-position: center;
   margin: 0; /* Remove margin */
@@ -91,6 +92,10 @@
   }
 .profiles {
   text-align: center;
+}
+
+.profileHeading{
+  color: #e5e5e5;
 }
 
 .profile-cards {

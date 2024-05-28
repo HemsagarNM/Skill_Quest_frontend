@@ -18,6 +18,7 @@ const Home = () => {
                 <Grid item xs={12} md={6} style={{marginLeft:'70px'}} >
                     <img src={New} alt="students" style={{ display : 'flex',   justifyContent : 'center', alignItems: 'center', paddingLeft:'20'}} />
                 </Grid>
+                
                 {/* <Grid item xs={12} md={6}>
                     <StyledPaper elevation={4}>
                         <StyledTitle>
@@ -28,6 +29,7 @@ const Home = () => {
                     </StyledPaper>
                 </Grid> */}
             </Grid>
+            <StyledTitle>Hiring the Right</StyledTitle> 
         </StyledContainer>
     );
 };
