@@ -2,6 +2,7 @@ import React from 'react'
 import "./About.css"
 import chethimg from "../../src/assets/Chethan_photo.jpg"
 import navimg from "../../src/assets/naveen_pic.jpg"
+import hritimg from "../../src/assets/Hrithik_pic.jpeg"
 const ProfileCard = ({ name, role, description, imageUrl }) => {
   return (
     <div className="profile-card">
@@ -38,7 +39,7 @@ const About = () => {
           name: 'Hrithik U',
           role: 'Front End Designer',
           description: 'Design front end and integrating LLM ',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          imageUrl: hritimg,
         },
         {
           name: 'Hemsagar N M',
