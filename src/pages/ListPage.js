@@ -13,6 +13,10 @@ const CACHE_EXPIRY = 1000 * 60 * 60;
 
 const Lists = () => {
     const navigate= useNavigate();
+    useEffect(()=>{
+        if(!localStorage.getItem('accessToken')) 
+            navigate('/');
+      });
   const [lists, setLists] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

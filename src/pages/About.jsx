@@ -4,6 +4,7 @@ import chethimg from "../../src/assets/Chethan_photo.jpg"
 import navimg from "../../src/assets/naveen_pic.jpg"
 import hritimg from "../../src/assets/Hrithik_pic.jpeg"
 import hemimg from "../../src/assets/hemsagar_pic.jpg"
+import { useEffect, useNavigate } from 'react'
 
 const ProfileCard = ({ name, role, description, imageUrl }) => {
   return (
