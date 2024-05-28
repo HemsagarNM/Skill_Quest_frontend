@@ -10,6 +10,7 @@ const Logout = () =>{
     useEffect(()=> {
         localStorage.clear();
         navigate('/');
+        alert("Logged out SuccessFully!")
     }, []);
     console.log(localStorage.getItem('accessToken'))
     return;

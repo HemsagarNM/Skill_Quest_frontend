@@ -88,21 +88,25 @@ class Menu extends React.Component {
         });
     }
     render() {
-        let menuStatus = this.state.isOpen ? 'isopen' : '';
 
-        return (
-            <div ref="root">
-                <div className="menubar">
-                    <div className="hambclicker" onClick={this._menuToggle}></div>
-                    <div id="hambmenu" className={menuStatus}><span></span><span></span><span></span><span></span></div>
-                    <div className="title">
-                        <h1 style={{ paddingTop: 8 }}>{this.props.title}</h1>
-                    </div>
-                    {this.props.tag}
-                </div>
-                <MenuLinks menuStatus={menuStatus} />
+      let menuStatus = this.state.isOpen ? 'isopen' : '';
+  
+      return (
+        <div ref="root" className='root'>
+          <div className="menubar">
+            <div className="hambclicker" onClick={ this._menuToggle }></div>
+            <div className="titlemain">
+            <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span><span></span></div>
+            <div className="title">
+              <h1 style={{paddingTop:8}}>{this.props.title }</h1>
             </div>
-        )
+            </div>
+            {this.props.tag }
+          </div>
+          <MenuLinks menuStatus={ menuStatus }/>
+        </div>
+      )
+
     }
 }
 

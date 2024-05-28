@@ -6,7 +6,14 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   box-sizing: border-box;
+  overflow-y: scroll; /* Show vertical scrollbar */
+  overflow-x: scroll
 }
+
+ /* .root{
+  overflow-y: scroll; 
+  overflow-x: scroll
+}  */
 
 .menubar {
   display: block;
@@ -14,11 +21,12 @@ body {
   background-color: #7f56da;
   box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
+  position: relative;
 }
 
 .menubar span {
   display: inline-block;
-  position: absolute;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 300;
@@ -27,12 +35,12 @@ body {
 }
 
 #hambmenu {
-  position: relative;
   width: 40px;
   height: 45px;
   float: left;
   transition: .5s ease-in-out;
   cursor: pointer;
+  position: fixed;
 }
 
 #hambmenu span {
@@ -54,7 +62,7 @@ body {
   content: '';
   height: 48px;
   width: 55px;
-  position: absolute;
+  position: fixed;
   top: 8px;
   left: 8px;
   cursor: pointer;
@@ -150,6 +158,8 @@ li a {
 
 #menu.isopen {
   transform: none;
+  overflow: auto;
+  position: fixed;
 }
 
 @media screen and (max-width: 420px) {
