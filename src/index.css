@@ -193,11 +193,11 @@ body {
   margin: 0;
   line-height: 1.5;
 }
-.Upload{
+.main-content{
   padding-top: 10%;
 }
 .UploadStyle {
-  padding-top: 10%;
+  padding-top: 30%;
   color: #000;
   /* background-color: rgb(235, 247, 249); */
   background-color: hsl(263, 17%, 91%);
