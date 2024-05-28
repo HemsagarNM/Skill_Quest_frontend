@@ -5,19 +5,26 @@ import navimg from "../../src/assets/naveen_pic.jpg"
 import hritimg from "../../src/assets/Hrithik_pic.jpeg"
 import hemimg from "../../src/assets/hemsagar_pic.jpg"
 
-const ProfileCard = ({ name, role, description, imageUrl }) => {
+const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
   return (
     <div className="profile-card">
       <div className="profile-header">
         <img src={imageUrl} alt={`${name}'s profile`} className="profile-image" />
+        
         <div className="profile-info">
           <h3>{name}</h3>
           <h4>{role}</h4>
-            
+          <div className='LinkedInUrl'>
+          <a href={linkedinURL}>{name}'s LinkedIn Profile</a>
+            </div>
         </div>
         <div className="profile-description">
                 {description}
+                
+                
+                
             </div>
+            
       </div>
       
     </div>
@@ -30,24 +37,28 @@ const About = () => {
           role: 'Team Lead,Project Designer',
           description: 'oversees the project and developing backend algorithm ',
           imageUrl: navimg,
+          linkedinURL: 'https://www.linkedin.com/in/hizinberg',
         },
         {
           name: 'Chethan A S',
           role: 'Front End Designer, Project Designer',
           description: 'Design front end and overseeing the integration of the project',
           imageUrl: chethimg,
+          linkedinURL: 'https://www.linkedin.com/in/chethan-a-s',
         },
         {
           name: 'Hrithik U',
           role: 'Front End Designer',
           description: 'Design front end and integrating LLM ',
           imageUrl: hritimg,
+          linkedinURL: 'https://www.linkedin.com/in/hrithikshet',
         },
         {
           name: 'Hemsagar N M',
           role: 'Front End Designer ',
           description: 'Design Front End and integrating API calls to backend',
           imageUrl: hemimg,
+          linkedinURL: 'https://www.linkedin.com/in/hemsagarnm',
         },
       ];
     
@@ -55,7 +66,7 @@ const About = () => {
 
 
           <div className="profiles main-content">
-            <h2>Meet Our Team</h2>
+            <div className='aboutTitle'><h2>Meet Our Team</h2></div>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard
@@ -64,7 +75,9 @@ const About = () => {
                   role={profile.role}
                   description={profile.description}
                   imageUrl={profile.imageUrl}
+                  linkedinURL={profile.linkedinURL}
                 />
+      
               ))}
             </div>
           </div>
