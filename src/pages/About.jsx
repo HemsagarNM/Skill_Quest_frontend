@@ -3,6 +3,8 @@ import "./About.css"
 import chethimg from "../../src/assets/Chethan_photo.jpg"
 import navimg from "../../src/assets/naveen_pic.jpg"
 import hritimg from "../../src/assets/Hrithik_pic.jpeg"
+import hemimg from "../../src/assets/hemsagar_pic.jpg"
+
 const ProfileCard = ({ name, role, description, imageUrl }) => {
   return (
     <div className="profile-card">
@@ -45,7 +47,7 @@ const About = () => {
           name: 'Hemsagar N M',
           role: 'Front End Designer ',
           description: 'Design Front End and integrating API calls to backend',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpiUYtU_frWqFQeaChQz5UhROaCK0d0IpNqDpwMWu3A&s',
+          imageUrl: hemimg,
         },
       ];
     
