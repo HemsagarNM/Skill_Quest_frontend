@@ -1,6 +1,5 @@
 {
-  "homepage": "https://hemsagarm-nd.github.io/frontend/",
-  "name": "frontend",
+  "name": "skillquest",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
