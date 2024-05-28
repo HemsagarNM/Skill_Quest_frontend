@@ -53,8 +53,9 @@ const About = () => {
     
       return (
 
-          <div className="profiles">
-            <h2 className='profileHeading'>Meet Our Team</h2>
+
+          <div className="profiles main-content">
+            <h2>Meet Our Team</h2>
             <div className="profile-cards">
               {profiles.map((profile, index) => (
                 <ProfileCard

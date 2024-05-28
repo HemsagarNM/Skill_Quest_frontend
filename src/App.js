@@ -14,10 +14,12 @@ import Result from './pages/ResultPage';
 import Logout from './Logout';
 import Lists from './pages/ListPage';
 import FileUpload from './Upload';
+import ResumeView from './pages/ResumeView';
 import ResumeDetailsPage from './pages/ResumeDetails';
 import About from './pages/About';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 console.log(BASE_URL)
+
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
@@ -26,9 +28,6 @@ const App = () => {
       {currentRole === null &&
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/choose" element={<ChooseUser visitor="normal" />} />
-          <Route path="/chooseasguest" element={<ChooseUser visitor="guest" />} />
-
           <Route path="/login" element={<LoginPage role="Admin" />} />
           <Route path="/Studentlogin" element={<LoginPage role="Applicant" />} />
           <Route path="/Teacherlogin" element={<LoginPage role="Recruiter" />} />
@@ -40,8 +39,10 @@ const App = () => {
           <Route path='/logout' element={<Logout />}/>
           <Route path='/list' element={<Menu title ='JOBS' tag={<Lists/>}/>}/>
           <Route path='/Results/:list_name' element={<Menu title ='Result' tag={<Result /> }/>}  />
+          <Route path='/ResumeView' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
+          <Route path='/ResumeView/:list_name/:resume_id' element={<Menu title ='ResumeView' tag={<ResumeView /> }/>}  />
           <Route path="/resume/:id" element={<ResumeDetailsPage />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/About" element={<Menu title ='About' tag={ <About />}/> } />
           {/* Component={Result} */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}
@@ -52,7 +53,7 @@ const App = () => {
         </>
       }
 
-      {currentRole === "Student" &&
+      {/* {currentRole === "Student" &&
         <>
           <StudentDashboard />
         </>
@@ -62,7 +63,7 @@ const App = () => {
         <>
           <TeacherDashboard />
         </>
-      }
+      } */}
     </Router>
   )
 }

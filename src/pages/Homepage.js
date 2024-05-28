@@ -25,15 +25,15 @@ const Homepage = () => {
                             <br />
                         </StyledTitle>
                         <StyledText>
-                            Streamline Recruitment using Pre-Trained Transformers.
+                            Streamline Recruitment using Transformers.
                         </StyledText>
                         <StyledBox>
-                            <StyledLink to="/choose">
+                            <StyledLink to="/login">
                                 <LightPurpleButton variant="contained" fullWidth>
                                     Login
                                 </LightPurpleButton>
                             </StyledLink>
-                            <StyledLink to="/chooseasguest">
+                            <StyledLink to="/login">
                                 {/* <Button variant="outlined" fullWidth
                                     sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
                                 >
@@ -42,7 +42,7 @@ const Homepage = () => {
                             </StyledLink>
                             <StyledText>
                                 Don't have an account?{' '}
-                                <Link to="/Adminregister" style={{color:"#550080"}}>
+                                <Link to="/Register" style={{color:"#550080"}}>
                                     Sign up
                                 </Link>
                             </StyledText>
