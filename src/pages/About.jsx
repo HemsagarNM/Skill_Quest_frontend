@@ -8,13 +8,15 @@ import { useEffect, useNavigate } from 'react'
 
 const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
   return (
+    
     <div className="profile-card">
+      <a href={linkedinURL} > 
       <div className="profile-header">
         <img src={imageUrl} alt={`${name}'s profile`} className="profile-image" />
         
         <div className="profile-info">
         <div className='LinkedInUrl'>
-          <h3><a href={linkedinURL}>{name}</a></h3>
+          <h3> {name} </h3>
           </div>
           <h4>{role}</h4>
         </div>
@@ -26,8 +28,8 @@ const ProfileCard = ({ name, role, description, imageUrl, linkedinURL }) => {
             </div>
             
       </div>
-      
-    </div>
+      </a>
+    </div> 
   );
 };
 const About = () => {
