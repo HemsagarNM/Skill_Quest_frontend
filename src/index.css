@@ -487,15 +487,6 @@ body {
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-<<<<<<< HEAD
   min-height: 100vh;
   height: auto;
 }
-.upldbackgrnd:after{
-  height: 10px;
-}
-=======
-  height: 130vh;
-}
-
->>>>>>> f8c092b5e645ca971d62c46fa6c13e1653deb726
