@@ -98,7 +98,7 @@ a {
      text-align: center;
        padding: 5%;
        background: url(../src/assets/3.jpg);
-       background-size: auto 120%;
+       background-size: 100% 120%;
        min-height: 100vh;
        height: auto;
 }

@@ -5,7 +5,7 @@ import {  useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-const CACHE_KEY = 'resultCache_';
+const CACHE_KEY_PREFIX = 'resultCache_';
 const CACHE_EXPIRY = 1000 * 60 * 60;
 
 const Result = () => {
@@ -15,15 +15,15 @@ const Result = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const BEARER_TOKEN = localStorage.getItem('accessToken')
+  const cacheKey = `${CACHE_KEY_PREFIX}${list_name}`;
 
 
   useEffect(() => {
-  const cachedData = localStorage.getItem(CACHE_KEY);
+    const cachedData = localStorage.getItem(cacheKey);
 
-    // const [navEntry] = performance.getEntriesByType('navigation');
-    // const isRefreshed = navEntry && navEntry.type === 'reload';
-    
-    if (cachedData) {
+//     const [navEntry] = performance.getEntriesByType('navigation');
+// const isRefreshed = navEntry && navEntry.type === 'reload';&& !isRefreshed
+    if (cachedData ) {
       const { data, timestamp } = JSON.parse(cachedData);
       if (Date.now() - timestamp < CACHE_EXPIRY) {
         setData(data);
@@ -41,7 +41,7 @@ const Result = () => {
         const sortedData = data.sort((a, b) => b.score - a.score);
         setData(sortedData);
         setLoading(false);
-        //localStorage.setItem(CACHE_KEY, JSON.stringify({ data: sortedData, timestamp: Date.now() }));
+        localStorage.setItem(cacheKey, JSON.stringify({ data: sortedData, timestamp: Date.now() }));
       })
       .catch(error => {
         setLoading(false);

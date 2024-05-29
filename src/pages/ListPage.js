@@ -61,7 +61,7 @@ const isRefreshed = navEntry && navEntry.type === 'reload';
       });
   }, []);
 
-  if (loading) return <div style={{color:'black'}}>Loading...</div>;
+  if (loading) return <div className='hourglass'></div>;
   if (error) return <div>Error: {error.message}</div>;
   if(!localStorage.getItem('accessToken'))
     {
